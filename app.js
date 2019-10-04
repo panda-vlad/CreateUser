@@ -1,10 +1,15 @@
 const express = require('express');
 const app = express();
 const router = require('./router')
+const db = require('./config/database.js');
 
 const PORT = 3000;
 const host = 'localhost';
 
+// Test db
+db.authenticate()
+  .then(() => console.log('Connected'))
+  .catch((err) => console.log(err));
 
 app.use(express.json())
 

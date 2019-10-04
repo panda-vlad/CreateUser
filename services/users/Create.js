@@ -11,8 +11,9 @@ class UsersCreate extends ServiceBase {
     };
 
     async execute ({data}) {
-        console.log(data)
+        console.log(2222, data)
         const isUserExist = await User.findOne({ where: { email: data.email } });
+        console.log(23232)
         const user = await User.create(data);
 
         const actionData = {
@@ -22,7 +23,7 @@ class UsersCreate extends ServiceBase {
                 email  : user.email
             }
         };
-        console.log(3434343, user)
+        console.log(33333, user)
         const action = await Action.create(actionData);
         return user;
     }

@@ -5,6 +5,11 @@ class Base extends Sequelize.Model {
         super.init(this.schema, { ...options, sequelize });
     }
 
+    static initRelationsAndHooks() {
+        if (this.initRelations) this.initRelations();
+        if (this.initHooks) this.initHooks();
+    }
+
     static async findById(id) {
         const entity = await this.findOne({ where: { id } });
 
