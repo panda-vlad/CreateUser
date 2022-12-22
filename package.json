@@ -23,7 +23,7 @@
     "docopt": "^0.6.2",
     "fs-extra": "^7.0.1",
     "handlebars": "^4.1.2",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "livr": "^2.2.4",
     "livr-extra-rules": "^1.2.1",
     "mole-rpc": "^0.3.5",
